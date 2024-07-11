@@ -1,0 +1,183 @@
+html,
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: hidden;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1fr 12fr;
+  grid-template-areas:
+    "aside header header header"
+    "aside main_content main_content main-_content"
+    "aside main_content main_content main-_content"
+    "aside main_content main_content main-_content";
+}
+
+.aside {
+  grid-area: aside;
+  border-right: 2px solid rgb(255, 255, 255);
+  /* border-style: double; */
+  background-color: #1f1f1f;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 6.5fr;
+}
+.menu_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.menu_logo > img {
+  animation-name: slide_right;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+@keyframes slide_right {
+  from {
+    transform: translateX(-200px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.navlinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 5rem;
+  margin-top: 5rem;
+}
+
+.navlinks ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.navlinks ul li a:hover {
+  color: yellowgreen;
+}
+
+.navlinks ul li {
+  list-style: none;
+}
+.header {
+  grid-area: header;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background-color: white;
+}
+.main_content {
+  grid-area: main_content;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  background-image: url(./Images/factory\ panorama\ 2\ -\ Copy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header ul {
+  background-color: #166938;
+  display: flex;
+  justify-content: space-around;
+}
+.header ul img {
+  background-color: white;
+  /* border-radius: 45px; */
+  padding: 10px;
+}
+
+.logo {
+  padding: 15px;
+  border: 5px solid rgb(53, 53, 53);
+  border-style: double;
+}
+
+.login-link {
+  text-decoration: none;
+  color: white;
+  color: yellowgreen;
+}
+.login-link:hover {
+  color: yellow;
+  font-weight: 900;
+}
+span {
+  font-weight: 900;
+  color: yellowgreen;
+  font-size: 1.3rem;
+}
+.gallery {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100vw;
+  height: 65vh;
+  width: 65vw;
+  position: relative;
+  overflow-x: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+}
+.gallery .card {
+  background-color: rgb(0, 0, 0, 0.7);
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  scroll-snap-align: center;
+  position: absolute;
+  top: 30px;
+  color: white;
+  line-height: 2px;
+  border: 2px solid silver;
+  margin-top: auto;
+}
+.gallery .sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: white;
+}
+
+h2 {
+  font-size: 2rem;
+  color: yellowgreen;
+  text-align: center;
+  margin-top: 2.5rem;
+  z-index: 7;
+  font-weight: bolder;
+  text-align: center;
+  position: relative;
+  top: -250px;
+}
