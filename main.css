@@ -31,7 +31,6 @@ body {
 
 .aside {
   grid-area: aside;
-
   background-color: #1f1f1f;
   display: grid;
   grid-template-columns: 1fr;
@@ -46,7 +45,7 @@ body {
 
 .menu_logo > img {
   animation-name: slide_right;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-timing-function: ease-in;
 }
 @keyframes slide_right {
@@ -55,7 +54,7 @@ body {
   }
 
   to {
-    transform: translateX(0px);
+    transform: translateX(92px);
   }
 }
 
@@ -74,6 +73,8 @@ body {
 }
 .navlinks ul li a:hover {
   color: yellowgreen;
+  width: 100%;
+  font-weight: 700;
 }
 
 .navlinks ul li {
@@ -106,18 +107,41 @@ body {
 .header ul {
   background-color: #166938;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
 }
 .header ul img {
   background-color: white;
-  /* border-radius: 45px; */
-  padding: 10px;
+  border-radius: 10px;
 }
 
+span {
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: yellowgreen;
+  border-bottom: 1px solid white;
+}
 .logo {
   padding: 15px;
   border: 5px solid rgb(53, 53, 53);
   border-style: double;
+  position: relative;
+  left: -40px;
+  animation-name: slide_right1;
+  animation-delay: 1s;
+  animation-duration: 10s;
+  animation-timing-function: ease;
+  width: 160px;
+}
+@keyframes slide_right1 {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(350px);
+  }
 }
 
 .login-link {
@@ -129,7 +153,7 @@ body {
   color: yellow;
   font-weight: 900;
 }
-span {
+.login-link span {
   font-weight: 900;
   color: yellowgreen;
   font-size: 1.3rem;
@@ -173,7 +197,8 @@ span {
 h1 {
   font-size: 2rem;
   color: white;
-  text-shadow: 2px 2px yellowgreen;
+  text-shadow: 5px 2px rgb(0, 0, 0);
+  margin-right: 11rem;
 }
 
 h2 {
