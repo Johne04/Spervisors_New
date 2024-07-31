@@ -20,7 +20,7 @@ body {
   overflow-y: hidden;
   background-color: black;
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: 1fr 7fr;
   grid-template-rows: 1fr 12fr;
   grid-template-areas:
     "aside header header header"
@@ -34,13 +34,15 @@ body {
   background-color: #1f1f1f;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 5.95fr;
+  grid-template-rows: 1fr 5.8fr;
+  border-right: 1px solid white;
 }
 .menu_logo {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
+  position: static;
 }
 
 .menu_logo > img {
@@ -62,8 +64,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 5rem;
-  margin-top: 5rem;
+  line-height: 3.8rem;
+  margin-top: 3.5rem;
 }
 
 .navlinks ul li a {
@@ -80,6 +82,20 @@ body {
 .navlinks ul li {
   list-style: none;
 }
+
+h3 {
+  font-weight: 800;
+  color: white;
+  font-size: 1.1rem;
+  border-top: 2px solid #ff9900;
+  border-bottom: 2px solid #ff9900;
+  background-color: #166938;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  letter-spacing: 1px;
+}
 .header {
   grid-area: header;
   display: block;
@@ -89,9 +105,10 @@ body {
   font-size: 1.3rem;
   font-weight: 700;
   background-color: white;
+  position: sticky;
 }
 .main_content {
-  grid-area: main_content;
+  /* grid-area: main_content; */
   height: 100%;
   display: flex;
   justify-content: center;
@@ -108,12 +125,14 @@ body {
   background-color: #166938;
   display: flex;
   justify-content: space-between;
+  align-self: center;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 }
 .header ul img {
   background-color: white;
   border-radius: 10px;
+  margin-top: 3px;
 }
 
 span {
@@ -140,7 +159,7 @@ span {
   }
 
   to {
-    transform: translateX(350px);
+    transform: translateX(613px);
   }
 }
 
@@ -162,6 +181,8 @@ span {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100vw;
+  justify-items: center;
+  align-items: center;
   height: 75vh;
   width: 75vw;
   position: relative;
@@ -169,6 +190,7 @@ span {
   overflow-x: hidden;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
+  border: 2px solid red;
 }
 .gallery .card {
   background-color: rgb(0, 0, 0, 0.7);
@@ -176,8 +198,8 @@ span {
   width: 90%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 0.5rem;
   scroll-snap-align: center;
   position: absolute;
@@ -186,24 +208,27 @@ span {
   line-height: 2px;
   border: 3px solid silver;
   border-style: double;
-  margin-top: auto;
+  margin-bottom: 10px;
 }
-.gallery .sec {
-  display: flex;
+/* .gallery .sec {
+  display: grid;
+  grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
-}
+} */
 
-h1 {
+/* h1 {
   font-size: 2rem;
   color: white;
   text-shadow: 5px 2px rgb(0, 0, 0);
   margin-right: 11rem;
+  letter-spacing: 2px;
 }
 
 h2 {
   font-size: 2rem;
-  color: yellowgreen;
+  color: #ff9900;
+  background-color: black;
   text-align: center;
   margin-top: 2.5rem;
   z-index: 7;
@@ -211,4 +236,10 @@ h2 {
   text-align: center;
   position: relative;
   top: -270px;
+} */
+
+.card2 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border: 2px solid white;
 }
